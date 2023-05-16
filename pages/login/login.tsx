@@ -12,7 +12,10 @@ export default function LoginScreen() : JSX.Element{
             .then((res) =>{
                 
             })
-            .catch()
+            .catch((err) =>{
+                setInvalidLogin(true);
+                console.log(err)
+            })
     }
     const [invalidLogin, setInvalidLogin] = useState(false)
     const [email,setEmail] = useState('');
